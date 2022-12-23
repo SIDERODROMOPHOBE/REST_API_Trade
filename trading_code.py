@@ -8,5 +8,5 @@ def getAllTokenPrice():
 
 def getBid(symbol):
     print(str(ur.urlopen("https://api.binance.com/api/v3/depth?symbol="+str(symbol)+"&limit=1").read()))
-
+#SUUUUUUUUUUUUUUUUUUUU
 getBid("BNBBTC")
