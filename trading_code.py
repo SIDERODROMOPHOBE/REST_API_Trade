@@ -17,3 +17,11 @@ def getDepth(direction,asset):
     print(asset,' current ',direction,' price is : ',datas[direction+'Price'])
     
 
+def ReadAgregatedData(pair,duration):
+    url='https://api.binance.com/api/v3/klines?symbol='+pair+'&interval='+duration
+    data=ur.urlopen(url).read()
+    candles =str(data).split('],[')
+
+    print(data)
+
+#ReadAgregatedData('BTCUSDT','5m')
